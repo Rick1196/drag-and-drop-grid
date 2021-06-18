@@ -1,0 +1,9 @@
+<div class="dashboard">
+  <div class="container" cdkDropListGroup >
+    <div class="item" *ngFor="let card of cards; let i = index;" [cdkDropListData]="i"  cdkDropList (cdkDropListDropped)="entered($event)" [cdkDropListConnectedTo]="drops" [style.backgroundColor]="card.color">
+      <div cdkDrag>
+        <h1>{{card.title}}</h1>
+      </div>
+    </div>
+  </div>
+</div>
